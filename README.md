@@ -1,29 +1,40 @@
-﻿# -Forensa : Live Link [https://forensa-5n7e.vercel.app/]
- Blockchain-Backed Forensic Shield 🛡️
-            Detecting Data Manipulation in Forensic & Death Records
+# #Forensa | Detecting Data Manipulation in Forensic & Death Records 🛡️
+> **Live Demo:** [https://forensa-5n7e.vercel.app/]
 
-•The Problem: In high-profile cases (e.g., Sexual Assault or Unnatural Death), victims and doctors often face extreme pressure to change reports. In a standard database, a corrupt admin can change the "Cause of Death" in seconds, leaving no trace.
+### ⚖️ The Problem
+In high-profile cases (e.g., Sexual Assault or Unnatural Death), medical records are vulnerable to **centralized tampering**. A corrupt administrator can alter a "Cause of Death" in a standard database in seconds, leaving no audit trail.
 
-•The Solution: #Forensa anchors the "Truth" to the Blockchain.
-
- Even if someone hacks the backend and changes the data, the Blockchain Hash will remain unchanged.
+### 🛡️ The Solution
+**#Forensa** Even if someone hacks the backend and changes the data, the Blockchain Hash will remain unchanged.
 During verification, the system compares the Live Backend vs. the Immutable Ledger. If even a single character is different, the system flags a Security Alert.
 
-•Immutable Fingerprint: Once a report is signed, its hash is stored on-chain.
-•The Audit Loop: If anyone alters the local database, the system instantly detects a Hash Mismatch.
-•Decentralized Evidence: High-res forensic images and sensitive text are wrapped in IPFS Metadata, ensuring the original evidence can always be recovered.
 
-🛠️ Technical Architecture
-1) Doctor Registration: Initial death declaration + IPFS Certificate upload.
-2) Forensic Audit: Specialist fills detailed forensic fields (External/Internal/Sensitive findings Hash)
-3) Chaining: $FinalHash = Hash(DeathHash + ForensicFields + IPFS\_CID)$.
-4) Blockchain Commitment: The final hash is anchored to a Smart Contract.Audit Loop: Verifier compares $Backend\_Hash \stackrel{?}{=} Blockchain\_Hash$.
+---
 
-Tech Stack:
+### 🛠️ Technical Architecture
 
-•Frontend: React + Tailwind (Modern Forensic UI)
-•Backend: FastAPI (Python)
-•Storage: IPFS (via Pinata)
-•Blockchain: Solidity Smart Contracts
+| Phase | Action | Outcome |
+| :--- | :--- | :--- |
+| **01. Identity Anchor** | Doctor registers initial death + IPFS cert upload | Initial `DeathHash` generated |
+| **02. Forensic Audit** | Pathologist inputs Internal/External/Assault findings | Metadata wrapped in IPFS |
+| **03. Cryptographic Seal** | Hashing of all components into a final proof | Immutable Ledger Commitment |
+| **04. Integrity Audit** | Verifier compares Live DB vs. Blockchain Anchor | **Fraud Detection** |
 
+**Hashing Logic:**
+The system ensures integrity by calculating the final anchor as:
+$$FinalHash = \text{SHA256}(DeathHash + ForensicFields + IPFS\_CID)$$
 
+---
+
+### 🏗️ Tech Stack
+* **Frontend:** React.js + Tailwind CSS (High-Fidelity Forensic UI)
+* **Backend:** FastAPI (Python)
+* **Storage:** IPFS via Pinata (Decentralized Evidence)
+* **Blockchain:** Solidity Smart Contracts (EVM Compatible)
+
+---
+
+### 🚀 Key Features
+* **Immutable Fingerprint:** On-chain storage of record hashes.
+* **The Audit Loop:** Real-time detection of database manipulation.
+* **Sensitive Data Wrapping:** Medico-legal evidence is stored in encrypted IPFS metadata to protect victim dignity.
