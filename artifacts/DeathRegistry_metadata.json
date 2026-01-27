@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "patientId",
+						"type": "string"
+					}
+				],
+				"name": "getHash",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "patientId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "finalHash",
+						"type": "string"
+					}
+				],
+				"name": "storeHash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"blockchain/DeathRegistry.sol": "DeathRegistry"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"blockchain/DeathRegistry.sol": {
+			"keccak256": "0xf0808ca4e8cfa3621a29e68df76cfebab8ada1c04b89819f72770f3c0bba9a31",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4fdffa71d1b14d581846fcde472cb9b67f43585714a873a46b8a2de2d2e53b5e",
+				"dweb:/ipfs/Qmc7zG3ahcjTs1dkawexBE4z2v2eBCuSXnHDt2vco3JmKx"
+			]
+		}
+	},
+	"version": 1
+}
