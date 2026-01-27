@@ -25,8 +25,8 @@ const Dashboard = () => {
                 #Forensa
               </h1>
             </div>
-            <p className="hidden md:block text-[10px] md:text-[11px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-black text-slate-500 mt-2 ml-1 md:ml-14 opacity-80">
-              Unaltered Evidence • Unshakeable Justice
+            <p className="hidden md:block text-[10px] md:text-[11px] uppercase tracking-[0.3em]  font-black text-slate-500 mt-2 ml-1 md:ml-14 opacity-80">
+             Justice, Hashed. Evidence, Unaltered.
             </p>
           </div>
 

@@ -85,9 +85,9 @@ const DoctorForm = () => {
               <ShieldCheck className="text-white" size={32} />
             </div>
             
-            <h2 className="text-4xl font-black text-white leading-tight tracking-tighter uppercase italic font-['Montserrat']">
-              IDENTITY <br /> 
-              <span className="text-blue-500">ANCHOR</span>
+            <h2 className="text-4xl  text-white leading-tight tracking-widest font-semibold uppercase  font-['Poppins']">
+              Hashing The Truth With  <br /> 
+              <span className="text-blue-500"> #Forensa</span>
             </h2>
 
             <div className="mt-8 space-y-6">
