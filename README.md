@@ -1,4 +1,4 @@
-# #Forensa | Detecting Data Manipulation in Forensic & Death Records 🛡️
+# #Forensa | Detecting Data Manipulation in Forensic Records 🛡️
 > **Live Demo:** [https://forensa-5n7e.vercel.app/]
 
 ### ⚖️ The Problem
@@ -38,3 +38,4 @@ $$FinalHash = \text{SHA256}(DeathHash + ForensicFields + IPFS\_CID)$$
 * **Immutable Fingerprint:** On-chain storage of record hashes.
 * **The Audit Loop:** Real-time detection of database manipulation.
 * **Sensitive Data Wrapping:** Medico-legal evidence is stored in encrypted IPFS metadata to protect victim dignity.
+
