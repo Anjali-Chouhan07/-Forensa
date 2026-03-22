@@ -52,7 +52,7 @@ export default function PostmortemForm() {
     if (!pid) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:8000/check-patient/${pid}`);
+      const res = await axios.get(`https://forensabackend-s6ck.vercel.app/check-patient/${pid}`);
       if (res.data.exists) {
         setAllowed(true);
         setMsg({ type: "success", content: "Identity verified. Accessing forensic logs..." });
@@ -72,7 +72,7 @@ export default function PostmortemForm() {
     setLoading(true);
     try {
       const imgCid = await uploadToIPFS(file);
-      const deathRes = await axios.get(`http://localhost:8000/get-death-hash/${pid}`);
+      const deathRes = await axios.get(`https://forensabackend-s6ck.vercel.app/get-death-hash/${pid}`);
       const deathHash = deathRes.data.death_hash;
 
       const metadata = {
@@ -90,7 +90,7 @@ export default function PostmortemForm() {
 
       const metaCid = await uploadToIPFS(new File([JSON.stringify(metadata)], "pm.json"));
 
-      const res = await axios.post("http://localhost:8000/submit-postmortem", {
+      const res = await axios.post("https://forensabackend-s6ck.vercel.app/submit-postmortem", {
         ...form,
         patient_id: pid,
         death_hash: deathHash,
