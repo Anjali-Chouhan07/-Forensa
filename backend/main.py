@@ -15,11 +15,17 @@ def sha(data: str):
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    # Yahan apne Frontend ka exact URL daalein
+    allow_origins=[
+        "https://forensa-j6z6.vercel.app", 
+        "http://localhost:5173" # Local testing ke liye
+    ],
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+    allow_methods=["*"], # GET, POST, etc. sab allow karne ke liye
+    allow_headers=["*"],)
+@app.get("/")
+def home():
+    return {"message": "Backend is running and CORS is allowed!"}
 
 # ---------------- IN MEMORY DB ----------------
 
