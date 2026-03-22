@@ -26,14 +26,14 @@ export const submitDeathReport = async (data) => {
 
   } catch (err) {
 
-    console.error("❌ Death Report API Error:", err);
+  console.log("FULL ERROR:", err.response?.data);
 
-    if (err.response) {
-      throw new Error(err.response.data?.message || "Backend Error");
-    }
-
-    throw new Error("Server Not Reachable");
+  if (err.response?.data?.detail) {
+    console.log("VALIDATION ERROR:", err.response.data.detail);
   }
+
+  throw new Error(JSON.stringify(err.response?.data?.detail));
+}
 };
 
 

@@ -39,19 +39,11 @@ export const storeHash = async (id, hash) => {
 // Get hash
 
 
+
 export const getHash = async (id) => {
-  try {
-    const patientId = String(id).trim();
-    console.log("🔍 Fetching ID from Chain:", patientId);
+  const patientId = String(id).trim();
+  const accounts = await web3.eth.getAccounts();
+  const result = await contract.methods.getHash(patientId).call({ from: accounts[0] });
 
-    // .call() के साथ account specify करना कभी-कभी Decoding Error ठीक कर देता है
-    const accounts = await web3.eth.getAccounts();
-    const result = await contract.methods.getHash(patientId).call({ from: accounts[0] });
-
-    return result;
-  } catch {
-    // अगर ID नहीं मिली तो Web3 Decoding Error फेंकता है, उसे यहाँ पकड़ें
-    console.error("❌ Web3 Decode Error - Record likely missing on chain.");
-    return null; 
-  }
+  return result;
 };
