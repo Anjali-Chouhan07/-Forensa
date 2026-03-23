@@ -15,10 +15,9 @@ def sha(data: str):
 
 app.add_middleware(
     CORSMiddleware,
-    CORSMiddleware,
-    allow_origins=["*"], # Iska matlab "All Websites Allowed" - Hackathon ke liye best hai
+    allow_origins=["https://forensa-j6z6.vercel.app", "http://localhost:5173"], # Apne domains yahan likho
     allow_credentials=True,
-    allow_methods=["*"], # GET, POST, PUT sab allow
+    allow_methods=["*"],
     allow_headers=["*"],)
 
 
