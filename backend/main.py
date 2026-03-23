@@ -23,9 +23,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"], # GET, POST, etc. sab allow karne ke liye
     allow_headers=["*"],)
-@app.get("/")
-def home():
-    return {"message": "Backend is running and CORS is allowed!"}
+
 
 # ---------------- IN MEMORY DB ----------------
 
