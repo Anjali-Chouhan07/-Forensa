@@ -70,7 +70,7 @@ export default function DoctorForm() {
   const checkExistingPatient = async () => {
     if (!report.patient_id) return true;
     try {
-      const res = await axios.get(`https://forensabackend-s6ck.vercel.app/check-patient/${report.patient_id}`);
+      const res = await axios.get(`https://forensa.vercel.app/check-patient/${report.patient_id}`);
       if (res.data.exists) {
         setMsg({ type: "error", content: "Registry Alert: Patient already registered in system." });
         return true;

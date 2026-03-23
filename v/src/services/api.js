@@ -5,7 +5,7 @@ import axios from "axios";
 ============================ */
 
 const API = axios.create({
-  baseURL: "https://forensabackend-s6ck.vercel.app",
+  baseURL: "https://forensa.vercel.app",
   timeout: 20000, // 20 sec max wait
   headers: {
     "Content-Type": "application/json",

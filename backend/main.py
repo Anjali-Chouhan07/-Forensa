@@ -15,13 +15,10 @@ def sha(data: str):
 
 app.add_middleware(
     CORSMiddleware,
-    # Yahan apne Frontend ka exact URL daalein
-    allow_origins=[
-        "https://forensa-j6z6.vercel.app", 
-        "http://localhost:5173" # Local testing ke liye
-    ],
+    CORSMiddleware,
+    allow_origins=["*"], # Iska matlab "All Websites Allowed" - Hackathon ke liye best hai
     allow_credentials=True,
-    allow_methods=["*"], # GET, POST, etc. sab allow karne ke liye
+    allow_methods=["*"], # GET, POST, PUT sab allow
     allow_headers=["*"],)
 
 

@@ -31,7 +31,7 @@ const VerifierForm = () => {
     setRecalculatedHash("");
 
     try {
-      const res = await axios.post("https://forensabackend-s6ck.vercel.app/verify-report", search);
+      const res = await axios.post("https://forensa.vercel.app/verify-report", search);
       const dbData = res.data?.data || res.data;
 
       if (!dbData || !dbData.patient_id || res.data.status === "error") {
